@@ -1,0 +1,15 @@
+RewriteEngine On
+
+# Skip rewrites for any request ending with a file extension
+# RewriteCond %{REQUEST_URI} !\.[^/]+$ [NC]   
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite rule for page, action, and id in `app` folder
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)/?$ index.php?page=$1&action=$2&ID=$3 [QSA,L]
+
+# Rewrite rule for page and action (in case id is not provided)
+RewriteRule ^([^/]+)/([^/]+)/?$ index.php?page=$1&action=$2 [QSA,L]
+
+# Handle single parameter (just the page)
+RewriteRule ^([^/]+)/?$ index.php?page=$1 [QSA,L]

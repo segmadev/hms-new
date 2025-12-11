@@ -1,0 +1,2 @@
+<?php 
+    $staff = new staff;

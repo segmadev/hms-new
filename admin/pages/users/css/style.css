@@ -1,0 +1,73 @@
+.user-status-badge {
+    min-width: 80px;
+    text-align: center;
+}
+
+.user-actions {
+    white-space: nowrap;
+}
+
+.user-actions .btn-group {
+    gap: 5px;
+}
+
+.search-form {
+    max-width: 600px;
+}
+
+.image-preview {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.form-card {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .search-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .search-form .form-control,
+    .search-form .form-select,
+    .search-form .btn {
+        width: 100%;
+    }
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.form-group .form-control {
+    border-radius: 0.25rem;
+}
+
+.form-group .invalid-feedback {
+    display: block;
+    margin-top: 0.25rem;
+}
+
+.password-toggle {
+    position: relative;
+}
+
+.password-toggle .btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}

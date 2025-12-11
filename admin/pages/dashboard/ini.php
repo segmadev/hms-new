@@ -1,0 +1,2 @@
+<?php
+    $constdash = "dashboard";
