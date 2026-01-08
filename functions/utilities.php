@@ -332,7 +332,7 @@ class utilities
         if ($format == "s") return ($interval->days * 24 * 3600) + ($interval->h * 3600) + ($interval->i * 60) + $interval->s;
         return ($interval->days * 24) + $interval->h + ($interval->i / 60) + ($interval->s / 3600);
     }
-    static function cal_percentage(int | float $no, int | float $total)
+    static function cal_percentage($no,  $total)
     {
         return round(($no * 100) / $total);
     }
